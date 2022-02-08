@@ -16,9 +16,14 @@ import (
 var CONFIGURATION *Configuration
 
 type Configuration struct {
-	AppEnv             string `env:"APP_ENV"`
-	LogLevel           string `env:"LOG_LEVEL"`
-
+	AppEnv             			string `env:"APP_ENV"`
+	LogLevel           			string `env:"LOG_LEVEL"`
+	KeycloakAdmin				string `env:"KEYCLOAK_ADMIN"`
+	KeycloakAdminPassword		string `env:"KEYCLOAK_ADMIN_PASSWORD"`
+	KeycloakUrl					string `env:"KEYCLOAK_URL"`
+	KeycloakSecret				string `env:"CLIENT_SECRET"`
+	KeycloakRealm				string `env:"KEYCLOAK_REALM"`
+	KeycloakClientId			string `env:"KEYCLOAK_CLIENT_ID"`
 }
 
 //

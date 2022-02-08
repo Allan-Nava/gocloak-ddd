@@ -8,6 +8,7 @@ package main
  */
 import (
 	"fmt"
+	"net/http"
 
 	"github.com/Allan-Nava/gocloak-ddd/config"
 	"github.com/Allan-Nava/gocloak-ddd/utils"

@@ -6,6 +6,12 @@ package auth
 *
  */
 
+//type AuthStore interface {}
 
 type AuthService struct {
 }
+
+/*func (s *AuthService) Login() (*AuthResponse, error){
+
+	//jwt, err := GCloakClient.Login(Client, ClientSecret, Realm, username, password)
+}*/

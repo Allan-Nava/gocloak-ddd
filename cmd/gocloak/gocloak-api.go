@@ -47,6 +47,11 @@ func main() {
 	utils.SetupEnv() //dotenv
 	config.SetEnvConfig()
 
+	//health check endpoint
+	f.Get("/health", func(c *fiber.Ctx) error {
+		return c.SendStatus(http.StatusOK)
+	})
+
 	//swagger setup
 	f.Get("/swagger/*", swagger.HandlerDefault) // default
 

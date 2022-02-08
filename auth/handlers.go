@@ -10,6 +10,7 @@ package auth
 import (
 	"net/http"
 
+	"github.com/Allan-Nava/gocloak-ddd/utils"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -31,7 +32,7 @@ func (h *AuthHandler) Login(c *fiber.Ctx) error {
 	if err := c.BodyParser(&requestBody); err != nil {
 		return err
 	}
-	login, err := h.Service.GetAll( requestBody.Username, requestBody.Password )
+	login, err := h.Service.Login(requestBody.Username, requestBody.Password)
 	if err != nil {
 		return c.Status(http.StatusInternalServerError).JSON(&utils.ApiError{Message: err.Error()})
 	}

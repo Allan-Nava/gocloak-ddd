@@ -11,6 +11,7 @@ import (
 
 	"github.com/Allan-Nava/gocloak-ddd/config"
 )
+
 //type AuthStore interface {}
 
 type AuthService struct {
@@ -23,17 +24,17 @@ func (s *AuthService) Login(username string, password string) (*AuthResponse, er
 	Realm := config.CONFIGURATION.KeycloakRealm
 	//
 	fmt.Printf("Client %v | ClientSecret %v | Realm %v", Client, ClientSecret, Realm)
-	jwt, err := GCloakClient.Login(Client, ClientSecret, Realm, username, password)
+	return nil, nil
+	/*jwt, err := GCloakClient.Login(Client, ClientSecret, Realm, username, password)
 
 	if err != nil {
 		// need to change the status code 400
 		return nil, err
 	}
-	resBody := response.Result().(
-		AuthResponse{
-			Token: jwt
-		})
+	var resp = AuthResponse{Token: jwt.}
 
-	return &resBody, nil
+	return &resp, nil*/
+
 }
+
 //

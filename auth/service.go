@@ -17,7 +17,7 @@ type AuthService struct {
 }
 
 //
-func (s *AuthService) Login() (*AuthResponse, error) {
+func (s *AuthService) Login(username string, password string) (*AuthResponse, error) {
 	Client := config.CONFIGURATION.KeycloakClientId
 	ClientSecret := config.CONFIGURATION.KeycloakSecret
 	Realm := config.CONFIGURATION.KeycloakRealm

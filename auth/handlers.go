@@ -17,17 +17,24 @@ type AuthHandler struct {
 	Service *AuthService
 }
 
-// CreateLiveClipping godoc
-// @Summary      CreateLiveClipping
-// @Description  CreateLiveClipping
+// Login godoc
+// @Summary      Login
+// @Description  Login
 // @Tags         livecut
 // @Accept json
-// @Param request body liveClippingRestreamerApiRequest true "request"
+// @Param request body LoginRequest true "request"
 // @Produce      json
-// @Success      200  {object} createLiveClippingResponse
+// @Success      200  {object} AuthResponse
 // @Router       /livecut/live_clipping [post]
 func (h *AuthHandler) Login(c *fiber.Ctx) error {
 	var requestBody LoginRequest
+	if err := c.BodyParser(&requestBody); err != nil {
+		return err
+	}
+	login, err := h.Service.GetAll( requestBody.Username, requestBody.Password )
+	if err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(&utils.ApiError{Message: err.Error()})
+	}
 	//
-	return c.Status(http.StatusOK).JSON(requestBody)
+	return c.Status(http.StatusOK).JSON(&login)
 }

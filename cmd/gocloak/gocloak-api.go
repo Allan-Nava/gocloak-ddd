@@ -9,6 +9,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/Allan-Nava/gocloak-ddd/config"
+	"github.com/Allan-Nava/gocloak-ddd/utils"
 	swagger "github.com/arsmn/fiber-swagger/v2"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -42,7 +44,8 @@ func main() {
 		FullTimestamp: true,
 	})
 	//
-	//config.SetEnvConfig()
+	utils.SetupEnv() //dotenv
+	config.SetEnvConfig()
 
 	//swagger setup
 	f.Get("/swagger/*", swagger.HandlerDefault) // default
@@ -63,7 +66,7 @@ func main() {
 
 	fmt.Println("\nGOCloak DDD API")
 	fmt.Println("\n2022 ∆ Allan Nava™")
-	//fmt.Printf("\nENV: %s", config.CONFIGURATION.AppEnv)
-	//fmt.Printf("\nRUNNING MODE: %s", config.CONFIGURATION.RunningMode)
+	fmt.Printf("\nENV: %s", config.CONFIGURATION.AppEnv)
+	fmt.Printf("\nRUNNING MODE: %s", config.CONFIGURATION.RunningMode)
 	f.Listen("0.0.0.0:8080")
 }

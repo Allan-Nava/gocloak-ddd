@@ -32,6 +32,7 @@ require (
 require (
 	github.com/andybalholm/brotli v1.0.2 // indirect
 	github.com/arsmn/fiber-swagger/v2 v2.24.0
+	github.com/caarlos0/env/v6 v6.9.1
 	github.com/gofiber/fiber v1.14.6
 	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.13.4 // indirect

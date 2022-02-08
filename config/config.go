@@ -1,4 +1,5 @@
 package config
+
 /*
 * Copyright © 2022 Allan Nava <>
 * Created 08/02/2022
@@ -16,14 +17,16 @@ import (
 var CONFIGURATION *Configuration
 
 type Configuration struct {
-	AppEnv             			string `env:"APP_ENV"`
-	LogLevel           			string `env:"LOG_LEVEL"`
-	KeycloakAdmin				string `env:"KEYCLOAK_ADMIN"`
-	KeycloakAdminPassword		string `env:"KEYCLOAK_ADMIN_PASSWORD"`
-	KeycloakUrl					string `env:"KEYCLOAK_URL"`
-	KeycloakSecret				string `env:"CLIENT_SECRET"`
-	KeycloakRealm				string `env:"KEYCLOAK_REALM"`
-	KeycloakClientId			string `env:"KEYCLOAK_CLIENT_ID"`
+	AppEnv                string `env:"APP_ENV"`
+	LogLevel              string `env:"LOG_LEVEL"`
+	RunningMode           string `env:"RUNNING_MODE"` //fallback or main
+	Port                  string `env:"PORT"`         //fallback or main
+	KeycloakAdmin         string `env:"KEYCLOAK_ADMIN"`
+	KeycloakAdminPassword string `env:"KEYCLOAK_ADMIN_PASSWORD"`
+	KeycloakUrl           string `env:"KEYCLOAK_URL"`
+	KeycloakSecret        string `env:"CLIENT_SECRET"`
+	KeycloakRealm         string `env:"KEYCLOAK_REALM"`
+	KeycloakClientId      string `env:"KEYCLOAK_CLIENT_ID"`
 }
 
 //
@@ -35,4 +38,5 @@ func SetEnvConfig() {
 	logrus.Info("\nload configuration OK")
 	CONFIGURATION = &cfg
 }
+
 //

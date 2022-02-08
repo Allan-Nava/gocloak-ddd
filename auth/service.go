@@ -12,7 +12,6 @@ import (
 	"github.com/Allan-Nava/gocloak-ddd/config"
 )
 
-
 type AuthService struct {
 }
 
@@ -22,6 +21,7 @@ func (s *AuthService) Login(username string, password string) (*AuthResponse, er
 	ClientSecret := config.CONFIGURATION.KeycloakSecret
 	Realm := config.CONFIGURATION.KeycloakRealm
 	//
+	//client := gocloak.NewClient("https://mycool.keycloak.instance")
 	fmt.Printf("Client %v | ClientSecret %v | Realm %v", Client, ClientSecret, Realm)
 	return nil, nil
 	/*jwt, err := GCloakClient.Login(Client, ClientSecret, Realm, username, password)

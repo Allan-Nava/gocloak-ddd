@@ -6,7 +6,7 @@ package auth
 * Updated 08/02/2022
 *
  */
-/*
+
 import (
 	"fmt"
 
@@ -19,7 +19,7 @@ type AuthStore interface {
 }
 
 type GoCloakAuthStore struct {
-	GCloakClient *gocloak.GoCloak
+	GCloakClient gocloak.GoCloak
 }
 
 //
@@ -29,11 +29,11 @@ func (s *GoCloakAuthStore) Login(username string, password string) {
 	ClientSecret := config.CONFIGURATION.KeycloakSecret
 	Realm := config.CONFIGURATION.KeycloakRealm
 	//
-	jwt, err := &s.GCloakClient.Login(Client, ClientSecret, Realm, username, password)
+	jwt, err := s.GCloakClient.Login(Client, ClientSecret, Realm, username, password)
 	if err != nil {
 		// need to change the status code 400
+		fmt.Printf("err %v", err)
 		//return nil, err
 	}
 	fmt.Printf("jwt %v", jwt)
 }
-*/

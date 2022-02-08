@@ -11,7 +11,14 @@ package auth
 type AuthService struct {
 }
 
-/*func (s *AuthService) Login() (*AuthResponse, error){
-
+//
+func (s *AuthService) Login() (*AuthResponse, error) {
+	Client := config.CONFIGURATION.KeycloakClientId
+	ClientSecret := config.CONFIGURATION.KeycloakSecret
+	Realm := config.CONFIGURATION.KeycloakRealm
+	//
+	fmt.Printf("Client %v | ClientSecret %v | Realm %v", Client, ClientSecret, Realm)
 	//jwt, err := GCloakClient.Login(Client, ClientSecret, Realm, username, password)
-}*/
+	return nil, nil
+}
+//

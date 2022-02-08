@@ -68,5 +68,6 @@ func main() {
 	fmt.Println("\n2022 ∆ Allan Nava™")
 	fmt.Printf("\nENV: %s", config.CONFIGURATION.AppEnv)
 	fmt.Printf("\nRUNNING MODE: %s", config.CONFIGURATION.RunningMode)
+	fmt.Printf("\nPORT HTTP: %s", config.CONFIGURATION.Port)
 	f.Listen("0.0.0.0:8080")
 }

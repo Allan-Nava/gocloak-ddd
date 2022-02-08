@@ -1,12 +1,13 @@
-package authuser
-
+package auth
 
 type LoginRequest struct {
-	Username           string `json:"username"`
-	Password           string `json:"password"`
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
+
 //
 type LogoutRequest struct {
-	RefreshToken           string `json:"refresh_token"`
+	RefreshToken string `json:"refresh_token"`
 }
+
 //

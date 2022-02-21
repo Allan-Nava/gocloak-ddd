@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/Nerzal/gocloak v1.0.0
-	github.com/gofiber/fiber/v2 v2.26.0
+	github.com/gofiber/fiber/v2 v2.27.0
 )
 
 require (
@@ -20,7 +20,7 @@ require (
 	github.com/mailru/easyjson v0.7.6 // indirect
 	github.com/swaggo/files v0.0.0-20210815190702-a29dd2bc99b2 // indirect
 	github.com/swaggo/swag v1.7.8 // indirect
-	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
+	golang.org/x/net v0.0.0-20220111093109-d55c255bac03 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/tools v0.1.7 // indirect
 	gopkg.in/resty.v1 v1.10.3 // indirect
@@ -28,14 +28,14 @@ require (
 )
 
 require (
-	github.com/andybalholm/brotli v1.0.2 // indirect
+	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/arsmn/fiber-swagger/v2 v2.24.0
 	github.com/caarlos0/env/v6 v6.9.1
 	github.com/joho/godotenv v1.4.0
-	github.com/klauspost/compress v1.13.4 // indirect
+	github.com/klauspost/compress v1.14.1 // indirect
 	github.com/sirupsen/logrus v1.8.1
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasthttp v1.32.0 // indirect
+	github.com/valyala/fasthttp v1.33.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e // indirect
+	golang.org/x/sys v0.0.0-20220111092808-5a964db01320 // indirect
 )

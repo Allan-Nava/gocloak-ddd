@@ -3,7 +3,7 @@ package utils
 /*
 * Copyright © 2022 Allan Nava <>
 * Created 08/02/2022
-* Updated 08/02/2022
+* Updated 14/04/2022
 *
  */
 type ErrorMess struct {
@@ -12,7 +12,8 @@ type ErrorMess struct {
 }
 
 type ApiError struct {
-	Message string `json:"message"`
+	Message  string `json:"message"`
+	Response string `json:"response"`
 }
 type ApiMessage struct {
 	Message  string `json:"message"`

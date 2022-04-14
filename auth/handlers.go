@@ -28,9 +28,13 @@ type AuthHandler struct {
 // @Success      200  {object} AuthResponse
 // @Router       /livecut/live_clipping [post]
 func (h *AuthHandler) Login(c *fiber.Ctx) error {
-	var requestBody LoginRequest
+	requestBody := new(LoginRequest)
 	if err := c.BodyParser(&requestBody); err != nil {
 		return err
+	}
+	errors := ValidateStruct(*requestBody)
+	if errors != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(errors)
 	}
 	login, err := h.Service.Login(requestBody.Username, requestBody.Password)
 	if err != nil {

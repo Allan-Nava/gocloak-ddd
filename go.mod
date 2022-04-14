@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/Nerzal/gocloak v1.0.0
 	github.com/go-playground/validator v9.31.0+incompatible
-	github.com/gofiber/fiber/v2 v2.29.0
+	github.com/gofiber/fiber/v2 v2.31.0
 )
 
 require (

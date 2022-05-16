@@ -35,7 +35,7 @@ require (
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/arsmn/fiber-swagger/v2 v2.24.0
-	github.com/caarlos0/env/v6 v6.9.1
+	github.com/caarlos0/env/v6 v6.9.2
 	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.15.0 // indirect
 	github.com/sirupsen/logrus v1.8.1

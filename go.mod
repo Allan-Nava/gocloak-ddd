@@ -23,7 +23,7 @@ require (
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mailru/easyjson v0.7.6 // indirect
 	github.com/swaggo/files v0.0.0-20210815190702-a29dd2bc99b2 // indirect
-	github.com/swaggo/swag v1.7.8 // indirect
+	github.com/swaggo/swag v1.8.1 // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/tools v0.1.7 // indirect
@@ -34,7 +34,7 @@ require (
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
-	github.com/arsmn/fiber-swagger/v2 v2.24.0
+	github.com/arsmn/fiber-swagger/v2 v2.31.1
 	github.com/caarlos0/env/v6 v6.9.3
 	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.15.0 // indirect

@@ -143,3 +143,37 @@ func RefreshToken(ctx context.Context, refreshToken string, realm string, client
 
 	return tokenRefreshed, nil
 }
+
+
+func UpdateAttributesUser(ctx context.Context, email string, realm string, attributes map[string][]string) (bool, error) {
+	//
+	//user, err := GetUser(ctx, username, realm)
+	user, err := GetUserEmail(ctx, email, realm)
+	if err != nil {
+		log.Errorf("failed to getting user: %s", err.Error())
+		return false, utils.NewError("AuthKeycloak", err.Error())
+	}
+	user.Attributes = &attributes
+	//
+	err = GCloakClient.UpdateUser(ctx, AdminJWT.AccessToken, realm, *user)
+	if err != nil {
+		log.Errorf("failed to update user: %s", err.Error())
+		// need to cast err to gocloak.GoCloakError then re init the client
+		goCloakErr := ParseGoCloakErorr(err)
+		if goCloakErr != nil {
+			if goCloakErr.Code == 401 {
+				InitKeycloak(ctx, USERNAME, PASSWORD, *Realm, Server)
+				err = GCloakClient.UpdateUser(ctx, AdminJWT.AccessToken, realm, *user)
+				if err != nil {
+					log.Errorf("failed to update user: %s", err.Error())
+					return false, utils.NewError("AuthKeycloak", err.Error())
+				}
+				return true, nil
+			}
+		}
+		return false, utils.NewError("AuthKeycloak", err.Error())
+	}
+	return true, nil
+}
+
+

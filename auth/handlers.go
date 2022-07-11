@@ -21,12 +21,12 @@ type AuthHandler struct {
 // Login godoc
 // @Summary      Login
 // @Description  Login
-// @Tags         livecut
+// @Tags         keycloak
 // @Accept json
 // @Param request body LoginRequest true "request"
 // @Produce      json
 // @Success      200  {object} AuthResponse
-// @Router       /livecut/live_clipping [post]
+// @Router       /auth/login [post]
 func (h *AuthHandler) Login(c *fiber.Ctx) error {
 	requestBody := new(LoginRequest)
 	if err := c.BodyParser(&requestBody); err != nil {

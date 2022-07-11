@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/Nerzal/gocloak v1.0.0
 	github.com/go-playground/validator v9.31.0+incompatible
-	github.com/gofiber/fiber/v2 v2.34.1
+	github.com/gofiber/fiber/v2 v2.35.0
 )
 
 require (
@@ -40,7 +40,7 @@ require (
 	github.com/klauspost/compress v1.15.0 // indirect
 	github.com/sirupsen/logrus v1.8.1
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasthttp v1.37.0 // indirect
+	github.com/valyala/fasthttp v1.38.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9 // indirect
 )

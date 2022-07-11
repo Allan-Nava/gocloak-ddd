@@ -47,7 +47,8 @@ func main() {
 	//
 	utils.SetupEnv() //dotenv
 	config.SetEnvConfig()
-
+	//InitKeycloak()
+	//
 	//health check endpoint
 	f.Get("/health", func(c *fiber.Ctx) error {
 		return c.SendStatus(http.StatusOK)

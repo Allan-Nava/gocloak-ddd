@@ -17,9 +17,12 @@ jobs:
       uses: actions/setup-go@v3
       with:
         go-version: 1.18
-
+        
+    - name: TestFiles
+      run: ls -l
+    
     - name: Build
-      run: go build -v -ldflags="-s -w" ./cmd/gocloak-api.go
+      run: go build -v -ldflags="-s -w" ./cmd/gocloak/gocloak-api.go
 
     - name: Test
       run: go test -v .

@@ -1,4 +1,7 @@
 # GoCloak Domain Driven Design Api Gateway
+[![Go Report Card](https://goreportcard.com/badge/github.com/Allan-Nava/gocloak-ddd)](https://goreportcard.com/report/github.com/Allan-Nava/gocloak-ddd)
+[![GoDoc](https://godoc.org/github.com/Allan-Nava/gocloak-ddd?status.svg)](https://godoc.org/github.com/Allan-Nava/gocloak-ddd)
+
 
 
 ## api overview

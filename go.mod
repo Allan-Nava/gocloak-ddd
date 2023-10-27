@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/Nerzal/gocloak v1.0.0
 	github.com/Nerzal/gocloak/v10 v10.0.1
+	github.com/caarlos0/env/v6 v6.10.1
 	github.com/go-playground/validator v9.31.0+incompatible
 	github.com/gofiber/fiber/v2 v2.41.0
 	gopkg.in/square/go-jose.v2 v2.6.0
@@ -48,7 +49,7 @@ require (
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/arsmn/fiber-swagger/v2 v2.31.1
-	github.com/caarlos0/env/v6 v6.10.1
+	github.com/caarlos0/env/v10 v10.0.0
 	github.com/joho/godotenv v1.5.1
 	github.com/klauspost/compress v1.15.9 // indirect
 	github.com/sirupsen/logrus v1.9.0
